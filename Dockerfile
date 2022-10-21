@@ -1,10 +1,10 @@
-FROM alpine:3.12.0
+FROM alpine:3.16.2
 
 ENV BATS_VERSION=1.1.0
-ENV CLOUD_SDK_VERSION=310.0.0
-ENV HELM_VERSION=3.5.0
-ENV KUBECTL_VERSION=1.17.12
-ENV KUSTOMIZE_VERSION=3.9.2
+ENV CLOUD_SDK_VERSION=406.0.0
+ENV HELM_VERSION=3.10.1
+ENV KUBECTL_VERSION=1.25.3
+ENV KUSTOMIZE_VERSION=4.5.7
 ENV PATH /google-cloud-sdk/bin:$PATH
 
 RUN apk update && \
@@ -58,7 +58,5 @@ RUN apk update && \
     curl -L https://github.com/a8m/envsubst/releases/download/v1.2.0/envsubst-`uname -s`-`uname -m` -o envsubst && \
     chmod +x envsubst && \
     mv envsubst /usr/local/bin
-
-COPY ./scripts /scripts
 
 ENTRYPOINT []
