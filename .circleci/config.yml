@@ -39,6 +39,7 @@ workflows:
             branches:
               ignore: main
       - publish:
+          context: docker
           filters:
             branches:
               only: main
