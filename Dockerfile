@@ -22,6 +22,7 @@ RUN apk update && \
     python3 \
     py3-crcmod \
     py3-pip \
+    yq \
     # Install kustomize
     && curl -L --output /tmp/kustomize_v${KUSTOMIZE_VERSION}.tar.gz https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv${KUSTOMIZE_VERSION}/kustomize_v${KUSTOMIZE_VERSION}_linux_amd64.tar.gz && \
     tar -xvzf /tmp/kustomize_v${KUSTOMIZE_VERSION}.tar.gz -C /usr/local/bin && \
